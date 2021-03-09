@@ -47,6 +47,7 @@ function App() {
       let  currentIndex = songs.findIndex(song=>song.id===currentSong.id);
       
       const songChanging = function (val) {
+        songs.map(song=>song.active=false);
         const activeSong = songs[val];
         activeSong.active=true;
         setCurrentSong(activeSong);
