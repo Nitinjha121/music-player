@@ -8,7 +8,7 @@ import data from "./data";
 
 function App() {
   //State
-  const [songs, setSongs] = useState(data());
+  const [songs] = useState(data());
   const [currentSong, setCurrentSong] = useState(songs[0]);
   const [isPlaying, setIsPlaying] = useState(false);
   const [songInfo, setSongInfo] = useState({
@@ -65,6 +65,7 @@ function App() {
         currentSong={currentSong}
         songInfo={songInfo}
         setSongInfo={setSongInfo}
+        playSongHandler={playSongHandler}
         songs={songs}
         audioRef={audioRef}
         setCurrentSong={setCurrentSong}

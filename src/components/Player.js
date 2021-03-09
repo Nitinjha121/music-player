@@ -7,7 +7,7 @@ import {
   faPause,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Player({ currentSong, setCurrentSong, isPlaying, songInfo, setSongInfo, audioRef, playSongHandler, songs }) {
+function Player({ currentSong, timeUpdateHandler, setCurrentSong, isPlaying, songInfo, setSongInfo, audioRef, playSongHandler, songs }) {
 
   const getTime = (time) => Math.floor(time / 60) + ":" + String(Math.floor(time % 60)).padStart(2, 0);
 
